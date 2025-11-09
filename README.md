@@ -47,7 +47,7 @@ When it's done, it will print the final best parameters and a LaTeX string to th
     * Create the 100-point `t_vec` tensor (from -6 to 60).
     * Move all three tensors to the correct device (e.g., `'cuda'` or `'cpu'`).
 
-* **Start Multi-Run Loop:** The script begins a `for` loop that runs `config.N_RUNS` times [ 100 times, Tested with 10, 25 and 120 and finalized n\_runs = 100].
+* **Start Multi-Run Loop:** The script begins a `for` loop that runs `config.N_RUNS` times > [ 100 times, Tested with 10, 25 and 120 and finalized n\_runs = 100].
 
 * **Inside Each Run:**
     * **Initialize:** A `ParametricModel` is created (with new random initial values for $\theta$, M, X) and a new `Adam` optimizer is set up.
