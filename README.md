@@ -33,7 +33,7 @@ python3 run_training.py
 ```
 
 > {When it's done, it will print the final best parameters and a LaTeX string to the console. It will also save a `loss_curves.png` plot in the root directory.}
-
+## Submission Answer : \left(t*\cos(0.523592)-e^{0.029981\left|t\right|}\cdot\sin(0.3t)\sin(0.523592)\ +54.987061,42+\ t*\sin(0.523592)+e^{0.029981\left|t\right|}\cdot\sin(0.3t)\cos(0.523592)\right)
 ---
 
 ## Summary of the process and baseline
