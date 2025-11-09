@@ -16,8 +16,8 @@ The goal is to find the three numbersâ€”**$\theta$ (theta)**, **M**, and **X**â€
 ## Running the file
 
 ```bash
-# 0. cd into file - 'Technical_Assessment'
-cd 'Technical_Assessment'
+# 0. cd into file - 'Optimization-Problem'
+cd 'Optimization-Problem'
 
 # 1. Create a virtual environment
 python3 -m venv venv
@@ -32,7 +32,7 @@ pip install -r requirements.txt
 python3 run_training.py
 ```
 
-When it's done, it will print the final best parameters and a LaTeX string to the console. It will also save a `loss_curves.png` plot in the root directory.
+> {When it's done, it will print the final best parameters and a LaTeX string to the console. It will also save a `loss_curves.png` plot in the root directory.}
 
 ---
 
@@ -51,6 +51,8 @@ When it's done, it will print the final best parameters and a LaTeX string to th
 
 * **Inside Each Run:**
     * **Initialize:** A `ParametricModel` is created (with new random initial values for $\theta$, M, X) and a new `Adam` optimizer is set up.
+      > { Went with adam, since it works better to find valleys compared to just plain gradient descent and varations of stochastic gradient descent even with high momemntum.}
+      > { side note: I did end up using a cyclical learning rate, in case adam tunnel-visions into a valley, so it has higher chances of exploring better. }
     * **Training Loop:** A second, inner `for` loop starts, running for `config.N_EPOCHS` [100\*8000 epochs] steps.
     * **Forward Pass:** `model(t_vec)` is called. This uses the current $\theta$, M, X into the equations to generate a 100-point predicted curve (`x_pred`, `y_pred`).
     * **Loss Calc:** `l1_loss(x_pred, y_pred, x_data, y_data)` is called. This calculates the total distance from our 1500 true points to the 100-point predicted curve.
