@@ -1,12 +1,6 @@
 # Python virtual environment
 venv/
 
-# Data files
-data/xy_data.csv
-
-#graph
-loss_curves.png
-
 # Python cache
 __pycache__/
 *.pyc
