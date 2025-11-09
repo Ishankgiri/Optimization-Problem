@@ -69,3 +69,4 @@ python3 run_training.py
 * **Report & Plot:**
     * The `plot_loss_curves()` function is called to create `loss_curves.png`.
     * The final, best parameters (**$\theta$**, **M**, **X**) and the best loss are logged to the console, and a formatted LaTeX string is printed.
+> { Added a plot for loss curves to show all 100 runs converges into the same min loss, and that is why I went ahead with the loss}
